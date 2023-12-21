@@ -11,8 +11,11 @@
     const click = () => {  
 
         // detta räknar ut tottalt antal ord
-        const cleanText = text.replace(/[.,?!]/g, '');
-        let words = cleanText.split(/\s+/);
+        const cleanText = text.replace(/[.,?!'"”’]/g, '');        
+        let allWords = cleanText.split(/\s+/);
+        let words = allWords.map(word => word.replace(/^[.,?!'"’”]+/, ''));
+
+
         words = words.filter(word => word.length > 0);
         totalWords = words.length;
         // detta räknar ut totalt antal ord slut
