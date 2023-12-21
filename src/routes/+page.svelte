@@ -11,7 +11,8 @@
     const click = () => {  
 
         // detta räknar ut tottalt antal ord
-        let words = text.split(/\s+/);
+        const cleanText = text.replace(/[.,?!]/g, '');
+        let words = cleanText.split(/\s+/);
         words = words.filter(word => word.length > 0);
         totalWords = words.length;
         // detta räknar ut totalt antal ord slut
@@ -26,7 +27,8 @@
         // antal meningar slut
 
         // antal ord längre än 6 bokstäver
-        let wordsMinSix = words.filter(words => words.length > 7);
+        let wordsMinSix = words.filter(words => words.length > 6);
+        // console.log(wordsMinSix)
         wordsLongerThen6Words = wordsMinSix.length;
 
         // antal ord längre än 6 bokstäver
