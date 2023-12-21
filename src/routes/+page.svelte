@@ -26,7 +26,7 @@
         // antal meningar slut
 
         // antal ord längre än 6 bokstäver
-        let wordsMinSix = words.filter(words => words.length > 6);
+        let wordsMinSix = words.filter(words => words.length > 7);
         wordsLongerThen6Words = wordsMinSix.length;
 
         // antal ord längre än 6 bokstäver
