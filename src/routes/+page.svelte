@@ -13,8 +13,6 @@
         // detta räknar ut tottalt antal ord
         let words = text.split(/\s+/);
         words = words.filter(word => word.length > 0);
-
-        console.log(words);
         totalWords = words.length;
         // detta räknar ut totalt antal ord slut
 
@@ -32,18 +30,10 @@
         wordsLongerThen6Words = wordsMinSix.length;
 
         // antal ord längre än 6 bokstäver
-
-
-
         // uträkningen 
-
         const wordDividedSentence = totalWords / totalMeningar;
-
         const over6AndWords = (wordsLongerThen6Words * 100) / totalWords;
-
         total = wordDividedSentence + over6AndWords;
-
-
     }
 
 </script>
